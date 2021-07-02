@@ -1,4 +1,4 @@
-name: "Cloudflare Purge Cache v2"
+name: "Purge Cache Cloudflare Zone"
 description: "Purge a zone's cache via the Cloudflare API"
 author: jonakemon
 inputs:
