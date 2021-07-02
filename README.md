@@ -21,9 +21,9 @@ All sensitive variables should be [set as encrypted secrets](https://help.github
 
 ### Creating a restricted API token on Cloudflare
 
-API Tokens are [a new feature](https://blog.cloudflare.com/api-tokens-general-availability/) as of August 2019. They allow you to restrict the scope of this action to only purging the cache of zones you specify. In other words, this is much safer than allowing this action complete control of your entire Cloudflare account. (I'm not evil though, I promise. 😊)
+API Tokens are [a feature](https://blog.cloudflare.com/api-tokens-general-availability/) that allows you to restrict the scope of this action to only purging the cache of zones you specify. In other words, this is much safer than allowing this action complete control of your entire Cloudflare account.
 
-Creating a token can be tricky, so here's what you should enter [on this page](https://dash.cloudflare.com/profile/api-tokens) to create a token for purging the cache of a single domain on your account:
+Creating a token is easy; here's an example of what you should enter [on this page](https://dash.cloudflare.com/profile/api-tokens) to create a token for purging the cache of a single domain on your account:
 
 ![Creating an API Token for purging](tokens.png)
 
