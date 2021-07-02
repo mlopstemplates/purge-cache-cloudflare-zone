@@ -39,11 +39,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-
-    # Put steps here to build your site, deploy it to a service, etc.
-
+    # Put other steps here if you'd like, i.e. to build your site, deploy it to a service, etc.
     - name: Purge cache
-      uses: jakejarvis/cloudflare-purge-action@master
+      uses: Jonakemon/purge-cache-cloudflare-zone
       with:
         cloudflareZone: ${{ secrets.CLOUDFLARE_ZONE }}
         cloudflareApiKey: ${{ secrets.CLOUDFLARE_API_KEY }}
@@ -51,7 +49,7 @@ jobs:
 
 ### Purging specific files
 
-To purge only specific files, you can pass an array of **fully qualified URLs** via a fourth environment variable named `PURGE_URLS`. Unfortunately, Cloudflare doesn't support wildcards (unless you're on the insanely expensive Enterprise plan) so in order to purge a folder, you'd need to list every file in that folder. It's probably safer to leave this out and purge everything, but in case you want really to, the syntax is as follows:
+To purge only specific files, you can pass an array of **fully qualified URLs** via a fourth environment variable named `PURGE_URLS`. Unfortunately, Cloudflare doesn't support wildcard on all plans. In order to purge a folder, you'd need to list every file in that folder. It's probably safer to leave this out and purge everything, but in case you want really to, the syntax is as follows:
 
 ```yaml
 purgeURLs: '["https://example.com/style.css", "https://example.com/favicon.ico"]'
@@ -60,4 +58,4 @@ purgeURLs: '["https://example.com/style.css", "https://example.com/favicon.ico"]
 
 ## License
 
-This project is distributed under the [MIT license](LICENSE.md).
+This project is distributed under the [MIT license](LICENSE.md). It is based on a [similar repository from jakejarvis](https://github.com/jakejarvis/cloudflare-purge-action).
