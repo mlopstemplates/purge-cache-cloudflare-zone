@@ -1,0 +1,23 @@
+name: "Cloudflare Purge Cache v2"
+description: "Purge a zone's cache via the Cloudflare API"
+author: jonakemon
+inputs:
+  cloudflareZone:
+    description: "The Zone ID of your domain, which can be found in the right sidebar of your domain's overview page on the Cloudflare dashboard."
+    required: true
+  cloudflareApiKey:
+    description: "Your Cloudflare API key."
+    required: true
+  purgeURLs:
+    description: "The specific URLs to purge (a STRING in JSON format '["https://example.com/style.css", "https://example.com/favicon.ico"]')"
+    required: false
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+    - ${{ inputs.cloudflareZone }}
+    - ${{ inputs.cloudflareApiKey }}
+    - ${{ inputs.purgeURLs }}
+branding:
+  color: orange
+  icon: trash-2

@@ -1,0 +1,6 @@
+FROM alpine:latest
+
+RUN apk update && apk add openssl curl
+
+COPY entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
