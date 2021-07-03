@@ -1,6 +1,9 @@
 name: "Purge Cache Cloudflare Zone"
 description: "Purge a zone's cache via the Cloudflare API"
-author: "jonakemon"
+author: "Jonakemon"
+branding:
+  color: "blue"
+  icon: "trash-2"
 inputs:
   cloudflareZone:
     description: "The Zone ID of your domain, which can be found in the right sidebar of your domain's overview page on the Cloudflare dashboard."
@@ -18,6 +21,3 @@ runs:
     - ${{ inputs.cloudflareZone }}
     - ${{ inputs.cloudflareApiKey }}
     - ${{ inputs.purgeURLs }}
-branding:
-  color: blue
-  icon: trash-2
