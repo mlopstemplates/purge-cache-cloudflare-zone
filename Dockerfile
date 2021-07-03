@@ -3,7 +3,7 @@ FROM alpine:latest
 LABEL "com.github.actions.name"="Purge Cache Cloudflare Zonee"
 LABEL "com.github.actions.description"="Purge a zone's cache via the Cloudflare API"
 LABEL "com.github.actions.icon"="trash-2"
-LABEL "com.github.actions.color"="orange"
+LABEL "com.github.actions.color"="blue"
 
 LABEL "repository"="https://github.com/Jonakemon/purge-cache-cloudflare-zone"
 LABEL "homepage"="https://github.com/Jonakemon/purge-cache-cloudflare-zone"
