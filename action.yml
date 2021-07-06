@@ -21,3 +21,4 @@ runs:
     - ${{ inputs.cloudflareZone }}
     - ${{ inputs.cloudflareApiKey }}
     - ${{ inputs.purgeURLs }}
+    
