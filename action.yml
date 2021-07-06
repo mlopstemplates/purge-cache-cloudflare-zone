@@ -20,5 +20,4 @@ runs:
   args:
     - ${{ inputs.cloudflareZone }}
     - ${{ inputs.cloudflareApiKey }}
-    - ${{ inputs.purgeURLs }} 
-    
+    - ${{ inputs.purgeURLs }}
